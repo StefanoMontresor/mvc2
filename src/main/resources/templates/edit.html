@@ -6,10 +6,14 @@
 </head>
 
 <body>
-<h1>Edit a record</h1>
+<h1>Edit a record:</h1>
+<div th:text="'First Name: ' + ${firstname}">Ciao</div>
+<div th:text="'Last Name: ' + ${lastname}">Ciao</div>
+<div th:text="'Id: ' + ${id}">Ciao</div>
 
-<form action="update" method="post">
-    <div>TODO: display all the data in text fields</div>
+<form action="update" th:action="@{update(id=${id})}" method="post" >
+    Name:<input type="text" name="firstname"><br>
+    Surname:<input type="text" name="lastname"><br>
     <input type="submit" />
 </form>
 
