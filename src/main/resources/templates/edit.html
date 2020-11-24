@@ -7,13 +7,13 @@
 
 <body>
 <h1>Edit a record:</h1>
-<div th:text="'First Name: ' + ${firstname}">Ciao</div>
-<div th:text="'Last Name: ' + ${lastname}">Ciao</div>
-<div th:text="'Id: ' + ${id}">Ciao</div>
+<div th:text="'Current name: ' + ${firstname}">Ciao</div>
+<div th:text="'Current surname: ' + ${lastname}">Ciao</div>
+<div th:text="'Current id: ' + ${id}">Ciao</div>
 
 <form action="update" th:action="@{update(id=${id})}" method="post" >
-    Name:<input type="text" name="firstname"><br>
-    Surname:<input type="text" name="lastname"><br>
+    New name:<input type="text" name="firstname"><br>
+    New surname:<input type="text" name="lastname"><br>
     <input type="submit" />
 </form>
 
